@@ -8,5 +8,5 @@ RUN mvn package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=MAVEN_BUILD /build/target/order-1.0.jar /app/
+COPY --from=MAVEN_BUILD /build/target/asset-1.0.jar /app/
 ENTRYPOINT ["java", "-jar", "asset-1.0.jar"]
