@@ -10,7 +10,7 @@
 
 
 ## run container
-`docker container run --env MONGO_URL=mongodb://admin:admdev@ec2-18-217-111-150.us-east-2.compute.amazonaws.com:27017/admin -d -p 8082:8082 poc-asset`
+`docker container run --env MONGO_URL=mongodb://admin:admdev@ec2-18-217-111-150.us-east-2.compute.amazonaws.com:27017/admin -d -p 8083:8083 poc-asset`
 
 ## ENV
 
