@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import tr.com.turkcell.crm.order.OrderCreated;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,8 +32,8 @@ public class AssetService
         }
     }
 
-    public Optional<Asset> findByCustomerId(String customerId)
+    public List<Asset> findByCustomerId(String customerId)
     {
-        return assetRepository.findByCustomerId(customerId);
+        return assetRepository.findByCustomerIdOrderByCreatedAtDesc(customerId);
     }
 }

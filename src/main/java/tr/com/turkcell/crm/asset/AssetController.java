@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 @RequestMapping(path = "/api")
 public class AssetController
@@ -19,10 +21,10 @@ public class AssetController
     }
 
     @GetMapping("/assets")
-    public ResponseEntity<Asset> findAsset(@RequestParam String customerId)
+    public ResponseEntity<List<Asset>> findAsset(@RequestParam String customerId)
     {
 
-        return ResponseEntity.of(assetService.findByCustomerId(customerId));
+        return ResponseEntity.ok(assetService.findByCustomerId(customerId));
 
     }
 }
